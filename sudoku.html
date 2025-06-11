@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="sudoku.css" />
+</head>
+<body>
+  <header>
+    <h1>Sudoku Master</h1>
+    <img src="asset/logo.png" alt="Sudoku Icon" class="icon" />
+    
+  </header>
+
+  <main>
+    <div id="sudoku-board"></div>
+
+    <div class="item">
+       <div><button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+          <div class="difficulty-controls">
+            <label>Difficulty:</label>
+            <button onclick="generatePuzzle('easy')">Easy</button>
+            <button onclick="generatePuzzle('medium')">Medium</button>
+            <button onclick="generatePuzzle('hard')">Hard</button>
+            
+          </div>
+          <div>
+            <button onclick="giveHint()">Hint</button></div>
+          
+         </div>
+            <div class="controls">
+            <button onclick="generatePuzzle()">New Game</button>
+            <button onclick="checkSolution()">Check Solution</button>
+            <button onclick="resetBoard()">Reset</button>
+          </div>
+
+          <div class="stats">
+            <span id="timer">⏱ 00:00</span>
+          </div>
+      </div>
+       <p id="message"></p>
+  </main>
+
+  <script src="sudoku.js"></script>
+</body>
+</html>

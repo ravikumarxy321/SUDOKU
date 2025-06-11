@@ -1,0 +1,209 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.4s, color 0.4s;
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #222;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.difficulty-controls button {
+  margin: 0 5px;
+  
+}
+main{
+  display: flex;
+  flex-direction: row;
+   gap:5px;
+}
+.item{
+display: flex;
+flex-direction: column;
+gap:20px;
+margin: 5px;
+  
+}
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #ff9800;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+body.dark button {
+  background-color: #bb86fc;
+  color: black;
+}
+
+body.dark button:hover {
+  background-color: #9f6ce2;
+}
+
+.icon {
+ width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+   position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+
+
+#sudoku-board input {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+input[readonly] {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 50px); /* slightly larger */
+  gap: 2px;
+  margin: 0 auto 20px;
+}
+
+.cell-wrapper {
+  position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+
+
+.cell-input {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding-right: 14px; /* make space for spinner inside */
+  box-sizing: border-box;
+}
+
+
+.spinner {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  height: 42px;
+  width: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.spin-btn {
+  font-size: 10px;
+ background-color: rgba(200, 200, 200, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 50%;
+  width: 100%;
+  line-height: 10px;
+}
+body.dark input {
+  background: #333;
+  color: white;
+}
+body.dark .spin-btn {
+  background-color: #444;
+}
+
+
+.spin-btn.up {
+  top: 0;
+}
+
+.spin-btn.down {
+  bottom: 0;
+}
+
+input[readonly] {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+input[readonly] + .spin-btn,
+input[readonly] ~ .spin-btn {
+  display: none;
+}
+.stats {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#message {
+  font-size: 1.1em;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.difficulty-controls {
+  margin: 15px auto;
+}
+
+.difficulty-controls label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+body.dark #message {
+  color: #fdd835; /* yellow for visibility */
+}
